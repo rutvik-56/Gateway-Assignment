@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using log4net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -13,6 +14,7 @@ namespace Source_Control_Assignment
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            log4net.Config.XmlConfigurator.Configure();
         }
     }
 }

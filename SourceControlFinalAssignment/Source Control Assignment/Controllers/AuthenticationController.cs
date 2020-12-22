@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using log4net;
 using System.Web.Mvc;
 using Source_Control_Assignment.Models;
 using System.Web.Security;
@@ -9,8 +10,15 @@ using System.IO;
 
 namespace Source_Control_Assignment.Controllers
 {
+
+
     public class AuthenticationController : Controller
     {
+
+        public static log4net.ILog Log { get; set; }
+
+        ILog log = log4net.LogManager.GetLogger(typeof(AuthenticationController));
+
         // GET: Auth
         public ActionResult SignIn()
         {
@@ -19,7 +27,8 @@ namespace Source_Control_Assignment.Controllers
 
         [HttpPost]
         public ActionResult SignIn(StudentsModel model)
-        {
+        { 
+            log.Debug("Inside SignIn");
             using (var context = new StudentsDBEntities())
             {
                 bool isvalid = context.Students.Any(x => x.Username == model.Username && x.Password == model.Password);
