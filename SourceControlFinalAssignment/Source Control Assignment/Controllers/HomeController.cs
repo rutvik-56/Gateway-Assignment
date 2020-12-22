@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using log4net;
 using System.Web;
 using System.Web.Mvc;
 using Source_Control_Assignment.Models;
@@ -10,16 +11,20 @@ namespace Source_Control_Assignment.Controllers
     [Authorize]
     public class HomeController : Controller
     {
+        public static log4net.ILog Log {get; set;}
 
+        ILog log = log4net.LogManager.GetLogger(typeof(HomeController));
         public ActionResult Index()
         {
+            log.Debug("Inside index debug");
             string id = Session["userId"].ToString();
             var model = StudentsDetail(int.Parse(id));
             return View(model);
         }
-
+         
         public StudentsModel StudentsDetail(int id)
         {
+            log.Debug("Create Student Model");
             using (var context = new StudentsDBEntities())
             {
                 var result = context.Students
