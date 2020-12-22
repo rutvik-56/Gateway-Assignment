@@ -21,9 +21,10 @@ namespace Source_Control_Assignment.Controllers
             var model = StudentsDetail(int.Parse(id));
             return View(model);
         }
-
+         
         public StudentsModel StudentsDetail(int id)
         {
+            log.Debug("Create Student Model");
             using (var context = new StudentsDBEntities())
             {
                 var result = context.Students
