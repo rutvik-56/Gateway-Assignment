@@ -1,0 +1,35 @@
+﻿@model Source_Control_Assignment.Models.StudentsModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Students Details</h2>
+
+<table class="table">
+
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col"> @Html.DisplayNameFor(model => model.Name)</th>
+            <th scope="col"> @Html.DisplayNameFor(model => model.Username)</th>
+            <th scope="col"> @Html.DisplayNameFor(model => model.Mail)</th>
+            <th scope="col"> @Html.DisplayNameFor(model => model.Phone)</th>
+            <th scope="col">  @Html.DisplayNameFor(model => model.Age)</th>
+            <th scope="col"> @Html.DisplayNameFor(model => model.Image)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row"> @Html.Display("Name")</th>
+            <td> @Html.Display("Username") </td>
+            <td> @Html.Display("Mail") </td>
+            <td> @Html.Display("Phone")</td>
+            <td>  @Html.Display("Age") </td>
+            <td> @Html.Display("Image") </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
