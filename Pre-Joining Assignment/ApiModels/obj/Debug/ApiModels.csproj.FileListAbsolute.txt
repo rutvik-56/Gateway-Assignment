@@ -1,0 +1,6 @@
+D:\AssignMent\Gateway-Assignment\Pre-Joining Assignment\ApiModels\bin\Debug\ApiModels.dll
+D:\AssignMent\Gateway-Assignment\Pre-Joining Assignment\ApiModels\bin\Debug\ApiModels.pdb
+D:\AssignMent\Gateway-Assignment\Pre-Joining Assignment\ApiModels\obj\Debug\ApiModels.csprojAssemblyReference.cache
+D:\AssignMent\Gateway-Assignment\Pre-Joining Assignment\ApiModels\obj\Debug\ApiModels.csproj.CoreCompileInputs.cache
+D:\AssignMent\Gateway-Assignment\Pre-Joining Assignment\ApiModels\obj\Debug\ApiModels.dll
+D:\AssignMent\Gateway-Assignment\Pre-Joining Assignment\ApiModels\obj\Debug\ApiModels.pdb
