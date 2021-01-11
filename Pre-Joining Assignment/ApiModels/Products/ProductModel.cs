@@ -45,6 +45,8 @@ namespace ApiModels.Products
         [DisplayName("Large Image")]
         public byte[] large_img { get; set; }
 
+        public string encode { get; set; }
+
         public virtual Users.UserModel Users { get; set; }
     }
 }

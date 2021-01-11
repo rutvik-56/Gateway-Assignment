@@ -71,12 +71,17 @@ namespace Pre_Joining_Assignment.Controllers
 
         public ActionResult Details()
         {
+            return View();
+        }
+
+        [HttpGet]
+        public JsonResult Detail()
+        {
             List<ProductModel> response = null;
             using (var request = new HttpClient())
             {
                 request.BaseAddress = new Uri("http://localhost:50593");
-                bool result = false;
-                
+               
                 try
                 {
                     int id = int.Parse(User.Identity.Name);
@@ -86,6 +91,12 @@ namespace Pre_Joining_Assignment.Controllers
                             .Content
                             .ReadAsAsync<List<ProductModel>>()
                             .Result;
+
+                    for(int i =0;i<response.Count;i++)
+                    {
+                        response[i].encode = Convert.ToBase64String(response[i].small_img, 0, response[i].small_img.Length);
+                    }
+                    
                     ViewBag.Prod = response;
                 }
                 catch (Exception e)

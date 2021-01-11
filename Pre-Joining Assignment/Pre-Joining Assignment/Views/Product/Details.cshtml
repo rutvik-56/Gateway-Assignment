@@ -15,9 +15,9 @@
             <th scope="col">@Html.DisplayNameFor(model => model.category)</th>
             <th scope="col">@Html.DisplayNameFor(model => model.price)</th>
             <th scope="col">@Html.DisplayNameFor(model => model.short_desc)</th>
-            <th scope="col">@Html.DisplayNameFor(model => model.small_img)</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
+            <th scope="col">Image</th>
+            @*<th scope="col">Edit</th>
+            <th scope="col">Delete</th>*@
 
         </tr>
     </thead>
@@ -31,8 +31,7 @@
                 <th>@prod.short_desc</th>
                 <th>
                     @{
-
-                        var img = "data:image/jpg;base64," + Convert.ToBase64String(prod.small_img, 0, prod.small_img.Length);
+                        var img = "data:image/jpg;base64," +  (prod.small_img, 0, prod.small_img.Length);
                     }
                     <img src="@img" class="img-thumbnail rounded" style="width: auto; height: 125px;" alt="Cinque Terre">
                 </th>
@@ -57,21 +56,27 @@
             $("#tb").DataTable(
                 {
                     "ajax": {
-                        "url": "Product/Details",
+                        "url": "/Product/Detail",
                         "type": "GET",
-                        "datatype": ""
+                        "datatype": "json"
                     },
 
-                    "columms": [
-                        { "data": "@Html.DisplayNameFor(model => model.name)" },
-                        { "data": "@Html.DisplayNameFor(model => model.category)" },
-                        { "data": "@Html.DisplayNameFor(model => model.price)" },
-                        { "data": "@Html.DisplayNameFor(model => model.short_desc)" },
-                        { "data": "@Html.DisplayNameFor(model => model.short_desc)" }
-            { "data": "Name" },
-            { "data": "Name" },
+                    "columns": [
+                        { "data": 'name' },
+                        { "data": 'category' },
+                        { "data": 'price'},
+                        { "data": 'short_desc' },
+                        {
+                            "data": 'encode',
+                            
+                            "render": function (data) {
+                                var s = "data:image/jpg;base64,";
+                                s += data;
+                                return '<img class="img-thumbnail rounded" style="width: auto; height: 85px;" src=' +s + ' >'
+                            }
+                        }
                     ]
                 });
-        }) ;
+        });
     </script>
 }
