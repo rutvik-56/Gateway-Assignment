@@ -71,16 +71,16 @@ namespace Pre_Joining_Assignment.Controllers
 
         public ActionResult Details()
         {
-
+            List<ProductModel> response = null;
             using (var request = new HttpClient())
             {
                 request.BaseAddress = new Uri("http://localhost:50593");
                 bool result = false;
-
+                
                 try
                 {
                     int id = int.Parse(User.Identity.Name);
-                    List<ProductModel> response = request.PostAsync("/api/Product/Details", id,
+                     response = request.PostAsync("/api/Product/Details", id,
                                        new JsonMediaTypeFormatter())
                             .Result
                             .Content
@@ -94,7 +94,7 @@ namespace Pre_Joining_Assignment.Controllers
                     //return 11;
                 }
             }
-            return View();
+            return Json(new { data = response }, JsonRequestBehavior.AllowGet);
         }
 
         public byte[] ConvertToBytes(HttpPostedFileBase image)
