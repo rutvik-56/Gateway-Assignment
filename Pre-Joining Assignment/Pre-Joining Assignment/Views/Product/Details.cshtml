@@ -8,8 +8,6 @@
 
 @*<script type="text/javascript"></script>*@
 
-
-
 <table id="tb" class="table">
     <thead class="thead-dark">
         <tr>
@@ -19,8 +17,6 @@
             <th scope="col">@Html.DisplayNameFor(model => model.short_desc)</th>
             <th scope="col">Image</th>
             <th scope="col"></th>
-            @*<th scope="col">Edit</th>
-        <th scope="col">Delete</th>*@
 
         </tr>
     </thead>
@@ -86,7 +82,7 @@
                         {
                             "data": 'pid',
                             "render": function (data) {
-                                return '<a class="btn btn-primary btn-xs mt-3" >Edit</a>  <a class="btn btn-danger btn-xs mt-3" >Delete</a>'
+                                return '<a class="btn btn-primary btn-xs mt-3" href="/Product/Update?pid=' + data +'">Edit</a>  <a class="btn btn-danger btn-xs mt-3" href="/Product/Delete?pid=' + data +'">Delete</a>'
                             },
                             "orderable": false
 

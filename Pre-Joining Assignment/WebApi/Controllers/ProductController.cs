@@ -15,6 +15,7 @@ namespace WebApi.Controllers
         {
             Products p = new Products()
             {
+                pid = prod.pid,
                 uid = prod.uid,
                 name = prod.name,
                 category = prod.category,
@@ -32,7 +33,32 @@ namespace WebApi.Controllers
                 context.SaveChanges();
                 return true;
             }
+        }
 
+        [HttpPost]
+        public ProductModel Single([FromBody]int pid)
+        {
+            using (var context = new ProductManagementEntities())
+            {
+                Products prod = context.Products.Where(id => id.pid == pid).FirstOrDefault();
+
+                ProductModel p = new ProductModel()
+                {
+                    pid = prod.pid,
+                    uid = prod.uid,
+                    name = prod.name,
+                    category = prod.category,
+                    price = prod.price,
+                    quantity = prod.quantity,
+                    short_desc = prod.short_desc,
+                    long_desc = prod.long_desc,
+                    small_img = prod.small_img,
+                    large_img = prod.large_img
+
+                };
+                
+                return p;
+            }
         }
 
         [HttpPost]
@@ -52,9 +78,27 @@ namespace WebApi.Controllers
                     long_desc = prod.long_desc,
                     small_img = prod.small_img,
                     large_img = prod.large_img
-
                 };
-                context.Entry(p).State = System.Data.Entity.EntityState.Modified;
+
+                Products tmp = context.Products.Where(id => prod.pid == id.pid).SingleOrDefault();
+                tmp.pid = prod.pid;
+                tmp.name = prod.name;
+                tmp.category = prod.category;
+                tmp.price = prod.price;
+                tmp.quantity = prod.quantity;
+                tmp.short_desc = prod.short_desc;
+                tmp.long_desc = prod.long_desc;
+                if(prod.small_img!=null)
+                {
+                    tmp.small_img = prod.small_img;
+                }
+
+                if (prod.large_img != null)
+                {
+                    tmp.large_img = prod.large_img;
+                }
+                
+                context.Entry(tmp).State = System.Data.Entity.EntityState.Modified;
                 context.SaveChanges();
                 return true;
             }

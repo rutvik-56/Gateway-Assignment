@@ -64,22 +64,23 @@ namespace Pre_Joining_Assignment.Controllers
         }
 
  
-        public ActionResult Update(ProductModel id)
+        public ActionResult Update(int pid)
         {
             using (var request = new HttpClient())
             {
                 request.BaseAddress = new Uri("http://localhost:50593");
-                bool result = false;
+                ProductModel result = null;
 
                 try
                 {
 
-                    result = request.PostAsync("/api/Product/Add", id,
+                    result = request.PostAsync("/api/Product/Single", pid,
                                        new JsonMediaTypeFormatter())
                             .Result
                             .Content
-                            .ReadAsAsync<bool>()
+                            .ReadAsAsync<ProductModel>()
                             .Result;
+                    return View(result);
                 }
                 catch (Exception e)
                 {
@@ -87,17 +88,42 @@ namespace Pre_Joining_Assignment.Controllers
                     //return 11;
                 }
 
-                if (result)
-                {
-                    return View();
-                }
-                else
-                {
-                    // Error
-                    return View();
-                }
+                
             }
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Update(ProductModel prod)
+        {
+            if(ModelState.IsValid)
+            {
+                using (var request = new HttpClient())
+                {
+                    request.BaseAddress = new Uri("http://localhost:50593");
+                    bool result = false;
+
+                    try
+                    {
+
+                        result = request.PostAsync("/api/Product/Update", prod,
+                                           new JsonMediaTypeFormatter())
+                                .Result
+                                .Content
+                                .ReadAsAsync<bool>()
+                                .Result;
+                        return RedirectToAction("Details");
+                    }
+                    catch (Exception e)
+                    {
+                        // error
+                        //return 11;
+                    }
+                }
+
+
+            }
+            return RedirectToAction("Details");
         }
 
         public ActionResult Delete(int pid)
@@ -110,7 +136,7 @@ namespace Pre_Joining_Assignment.Controllers
                 try
                 {
               
-                    result = request.PostAsync("/api/Product/Add", pid,
+                    result = request.PostAsync("/api/Product/Delete", pid,
                                        new JsonMediaTypeFormatter())
                             .Result
                             .Content
@@ -125,15 +151,15 @@ namespace Pre_Joining_Assignment.Controllers
 
                 if (result)
                 {
-                    return View();
+                    return RedirectToAction("Details");
                 }
                 else
                 {
                     // Error
-                    return View();
+                    return RedirectToAction("Details");
                 }
             }
-            return View();
+            
         }
 
         public ActionResult Details()
