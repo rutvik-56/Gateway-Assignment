@@ -63,9 +63,76 @@ namespace Pre_Joining_Assignment.Controllers
             return View();
         }
 
-
-        public ActionResult Update()
+ 
+        public ActionResult Update(ProductModel id)
         {
+            using (var request = new HttpClient())
+            {
+                request.BaseAddress = new Uri("http://localhost:50593");
+                bool result = false;
+
+                try
+                {
+
+                    result = request.PostAsync("/api/Product/Add", id,
+                                       new JsonMediaTypeFormatter())
+                            .Result
+                            .Content
+                            .ReadAsAsync<bool>()
+                            .Result;
+                }
+                catch (Exception e)
+                {
+                    // error
+                    //return 11;
+                }
+
+                if (result)
+                {
+                    return View();
+                }
+                else
+                {
+                    // Error
+                    return View();
+                }
+            }
+            return View();
+        }
+
+        public ActionResult Delete(int pid)
+        {
+            using (var request = new HttpClient())
+            {
+                request.BaseAddress = new Uri("http://localhost:50593");
+                bool result = false;
+
+                try
+                {
+              
+                    result = request.PostAsync("/api/Product/Add", pid,
+                                       new JsonMediaTypeFormatter())
+                            .Result
+                            .Content
+                            .ReadAsAsync<bool>()
+                            .Result;
+                }
+                catch (Exception e)
+                {
+                    // error
+                    //return 11;
+                }
+
+                if (result)
+                {
+                    return View();
+                }
+                else
+                {
+                    // Error
+                    return View();
+                }
+            }
             return View();
         }
 

@@ -33,10 +33,45 @@ namespace WebApi.Controllers
                 return true;
             }
 
-            return false;
-
         }
 
+        [HttpPost]
+        public bool Update([FromBody]ProductModel prod)
+        {
+            using (var context = new ProductManagementEntities())
+            {
+                Products p = new Products()
+                {
+                    pid = prod.pid,
+                    uid = prod.uid,
+                    name = prod.name,
+                    category = prod.category,
+                    price = prod.price,
+                    quantity = prod.quantity,
+                    short_desc = prod.short_desc,
+                    long_desc = prod.long_desc,
+                    small_img = prod.small_img,
+                    large_img = prod.large_img
+
+                };
+                context.Entry(p).State = System.Data.Entity.EntityState.Modified;
+                context.SaveChanges();
+                return true;
+            }
+        }
+
+        [HttpPost]
+        public bool Delete([FromBody]int prod)
+        {
+            using (var context = new ProductManagementEntities())
+            {
+                Products p = context.Products.Where(x => x.pid == prod).FirstOrDefault();
+                context.Entry(p).State = System.Data.Entity.EntityState.Deleted;
+                context.SaveChanges();
+                return true;
+            }
+            
+        }
 
         [HttpPost]
         public List<ProductModel> Details([FromBody]int id)

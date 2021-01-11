@@ -8,6 +8,8 @@
 
 @*<script type="text/javascript"></script>*@
 
+
+
 <table id="tb" class="table">
     <thead class="thead-dark">
         <tr>
@@ -16,8 +18,9 @@
             <th scope="col">@Html.DisplayNameFor(model => model.price)</th>
             <th scope="col">@Html.DisplayNameFor(model => model.short_desc)</th>
             <th scope="col">Image</th>
+            <th scope="col"></th>
             @*<th scope="col">Edit</th>
-            <th scope="col">Delete</th>*@
+        <th scope="col">Delete</th>*@
 
         </tr>
     </thead>
@@ -62,19 +65,34 @@
                     },
 
                     "columns": [
-                        { "data": 'name' },
+                        {
+                            "data": 'name',
+                            "margin-left": '120px'
+                        },
                         { "data": 'category' },
                         { "data": 'price'},
-                        { "data": 'short_desc' },
+                        {
+                            "data": 'short_desc',
+                            "orderable": false},
                         {
                             "data": 'encode',
-                            
                             "render": function (data) {
                                 var s = "data:image/jpg;base64,";
                                 s += data;
-                                return '<img class="img-thumbnail rounded" style="width: auto; height: 85px;" src=' +s + ' >'
-                            }
+                                return '<img class="img-thumbnail rounded " style="width: auto; height: 85px;" src=' +s + ' >'
+                            },
+                            "orderable": false
+                        },
+                        {
+                            "data": 'pid',
+                            "render": function (data) {
+                                return '<a class="btn btn-primary btn-xs mt-3" >Edit</a>  <a class="btn btn-danger btn-xs mt-3" >Delete</a>'
+                            },
+                            "orderable": false
+
+
                         }
+
                     ]
                 });
         });
