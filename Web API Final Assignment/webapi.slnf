@@ -1,0 +1,11 @@
+{
+  "solution": {
+    "path": "Hotel_WebApi\\HotelManagmentApi\\HotelManagement_Web_Api.sln",
+    "projects": [
+      "..\\HMS.BAL\\Hotel.Bussiness.csproj",
+      "..\\HMS.DAL\\Hotel.DB.csproj",
+      "..\\HMS.Models\\Hotel.Model.csproj",
+      "HotelManagement_WebApi.csproj"
+    ]
+  }
+}

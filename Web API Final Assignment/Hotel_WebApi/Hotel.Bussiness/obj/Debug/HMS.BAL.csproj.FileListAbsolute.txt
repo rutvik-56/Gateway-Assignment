@@ -1,0 +1,60 @@
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.BAL.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.BAL.pdb
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.DAL.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.Models.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\Newtonsoft.Json.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\System.Net.Http.Formatting.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\System.Web.Http.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\System.Web.Http.WebHost.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\Unity.Abstractions.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\Unity.Container.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\Unity.WebApi.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\EntityFramework.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.DAL.pdb
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.DAL.dll.config
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.Models.pdb
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\Newtonsoft.Json.xml
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\System.Net.Http.Formatting.xml
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\System.Web.Http.xml
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\System.Web.Http.WebHost.xml
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\Unity.Abstractions.pdb
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\Unity.Container.pdb
+D:\Gateway\HotelManagmentApi\HMS.BAL\bin\Debug\EntityFramework.xml
+D:\Gateway\HotelManagmentApi\HMS.BAL\obj\Debug\HMS.BAL.csprojAssemblyReference.cache
+D:\Gateway\HotelManagmentApi\HMS.BAL\obj\Debug\HMS.BAL.csproj.CoreCompileInputs.cache
+D:\Gateway\HotelManagmentApi\HMS.BAL\obj\Debug\HMS.BAL.csproj.CopyComplete
+D:\Gateway\HotelManagmentApi\HMS.BAL\obj\Debug\HMS.BAL.dll
+D:\Gateway\HotelManagmentApi\HMS.BAL\obj\Debug\HMS.BAL.pdb
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.BAL.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.BAL.pdb
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.DAL.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.Models.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\Newtonsoft.Json.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\System.Net.Http.Formatting.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\System.Web.Http.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\System.Web.Http.WebHost.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\Unity.Abstractions.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\Unity.Container.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\Unity.WebApi.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\EntityFramework.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.DAL.pdb
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.DAL.dll.config
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\HMS.Models.pdb
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\Newtonsoft.Json.xml
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\System.Net.Http.Formatting.xml
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\System.Web.Http.xml
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\System.Web.Http.WebHost.xml
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\Unity.Abstractions.pdb
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\Unity.Container.pdb
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\bin\Debug\EntityFramework.xml
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\obj\Debug\HMS.BAL.csprojAssemblyReference.cache
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\obj\Debug\HMS.BAL.csproj.CoreCompileInputs.cache
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\obj\Debug\HMS.BAL.csproj.CopyComplete
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\obj\Debug\HMS.BAL.dll
+D:\Gateway-Assignments\Web API Final Assignment\HotelManagmentApi\HMS.BAL\obj\Debug\HMS.BAL.pdb

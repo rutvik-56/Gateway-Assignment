@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "929650cf-c9ef-4a42-a18c-6b006d8d495a",
+		"name": "HotelManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:52968/api/HMS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"HotelName\":\"Rrr\",\r\n\"Address\":\"sdfds\",\r\n\"City\":\"surat\",\r\n\"Pincode\":\"395006\",\r\n\"ContactNumber\":7575828827,\r\n\"Contactperson\":\"Rutvik Rupapara\",\r\n\"CreatedBy\":\"Rutvik Rupapara\",\r\n\"Website\":\"Rutvik.co.in\",\r\n\"Facebook\":\"RRR\",\r\n\"Twitter\":\"RRR\",\r\n\"IsActive\":\"0\",\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:52968/api/HMS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:52968/api/HMS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:52968/api/HMS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMS"
+					]
+				},
+				"description": "get request"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:52968/api/HMS/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:52968/api/HMS/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMS",
+						"2"
+					]
+				},
+				"description": "get information of hotel which have id 2"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:52968/api/HMS/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"Hotel_Id\": 3,\r\n        \"HotelName\": \"Rupapara\",\r\n        \"Address\": \"janta sodic\",\r\n        \"City\": \"mumbai\",\r\n        \"Pincode\": \"354720\",\r\n        \"ContactNumer\": 95687451447,\r\n        \"ContactPerson\": \"dim vala\",\r\n        \"Website\": \"www.coffee.com\",\r\n        \"Facebook\": \"fb\",\r\n        \"Twitter\": \"tw\",\r\n        \"IsActive\": \"1\",\r\n         \"CreatedBy\": \"RRR\",\r\n\r\n        \"UpdatedBy\": \"Meet pujara\",\r\n        \"Books\": [],\r\n        \"Rooms\": []\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:52968/api/HMS/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMS",
+						""
+					]
+				},
+				"description": "updated request"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:52968/api/HMSROOM",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"Room_Id\":1,\r\n     \"Hotel_Id\":1,\r\n     \"RoomName\":\"Double Bad\",\r\n     \"Category\":\"large\",\r\n     \"Price\":\"3154\",\r\n     \"IsActive\":\"1\",\r\n     \"CreatedBy\":\"Rutvik\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:52968/api/HMSROOM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMSROOM"
+					]
+				},
+				"description": "room added"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:52968/api/HMSROOM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:52968/api/HMSROOM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMSROOM"
+					]
+				},
+				"description": "get room details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:52968/api/HMSROOM",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"Room_Id\": 1,\r\n        \"RoomName\": \"large bad\",\r\n        \"Category\": \"large\",\r\n        \"Price\": \"2570\",\r\n        \"IsActive\": \"1\",\r\n        \"CreateDate\": \"2021-01-14T13:59:17.373\",\r\n        \"CreatedBy\": \"Rutvi RRR\",\r\n        \"UpdateDate\": null,\r\n        \"UpdatedBy\": \"Rutvik RRR\",\r\n        \"Hotel_Id\": 1,\r\n        \"Books\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:52968/api/HMSROOM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMSROOM"
+					]
+				},
+				"description": "updated room"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:52968/api/HMSROOM/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:52968/api/HMSROOM/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMSROOM",
+						""
+					]
+				},
+				"description": "get updated room"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:52968/api/HMSBOOK/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n     \"Room_Id\": 1, \r\n     \"Hotel_Id\":1,\r\n     \"StatusOfBooking\":\"Close\",\r\n     \"IsActive\":\"1\",\r\n     \"BookingDate\": \"14-01-2020\"\r\n\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:52968/api/HMSBOOK/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMSBOOK",
+						""
+					]
+				},
+				"description": "book successfull"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:52968/api/HMSBOOK/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:52968/api/HMSBOOK/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMSBOOK",
+						"1"
+					]
+				},
+				"description": "booking deleted"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:52968/api/HMSBOOK/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:52968/api/HMSBOOK/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52968",
+					"path": [
+						"api",
+						"HMSBOOK",
+						""
+					]
+				},
+				"description": "fetch updated hotel"
+			},
+			"response": []
+		}
+	]
+}
