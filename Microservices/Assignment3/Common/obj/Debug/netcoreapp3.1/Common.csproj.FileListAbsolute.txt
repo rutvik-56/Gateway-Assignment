@@ -16,3 +16,12 @@ D:\Learning\Assignment3\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
 D:\Learning\Assignment3\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
 D:\Learning\Assignment3\Common\obj\Debug\netcoreapp3.1\Common.dll
 D:\Learning\Assignment3\Common\obj\Debug\netcoreapp3.1\Common.pdb
+D:\AssignMent\Gateway-Assignment\Microservices\Assignment3\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+D:\AssignMent\Gateway-Assignment\Microservices\Assignment3\Common\bin\Debug\netcoreapp3.1\Common.dll
+D:\AssignMent\Gateway-Assignment\Microservices\Assignment3\Common\bin\Debug\netcoreapp3.1\Common.pdb
+D:\AssignMent\Gateway-Assignment\Microservices\Assignment3\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache
+D:\AssignMent\Gateway-Assignment\Microservices\Assignment3\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+D:\AssignMent\Gateway-Assignment\Microservices\Assignment3\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+D:\AssignMent\Gateway-Assignment\Microservices\Assignment3\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+D:\AssignMent\Gateway-Assignment\Microservices\Assignment3\Common\obj\Debug\netcoreapp3.1\Common.dll
+D:\AssignMent\Gateway-Assignment\Microservices\Assignment3\Common\obj\Debug\netcoreapp3.1\Common.pdb

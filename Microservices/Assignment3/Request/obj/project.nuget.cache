@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "s80DxLlkCeD0I681D6je6IDGUfrbZQWZ5dnGpMncYh6YBS1bMSByPNDoJBJlCOt+e/PNMGsRQU3V3Z0D+m7q+w==",
+  "dgSpecHash": "AZkRmtwjnm6sbmpVrhybZSuBnzVEGxg4c3zkufY2uKAM9j6LvLn4kqOHEItsEf6Zarl7bLu9TlFcAFNf2+Ihbg==",
   "success": true,
-  "projectFilePath": "D:\\Learning\\Assignment3\\Request\\Request.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\Request\\Request.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rutvik\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

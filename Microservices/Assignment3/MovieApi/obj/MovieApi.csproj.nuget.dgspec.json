@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Learning\\Assignment3\\MovieApi\\MovieApi.csproj": {}
+    "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\MovieApi\\MovieApi.csproj": {}
   },
   "projects": {
-    "D:\\Learning\\Assignment3\\Common\\Common.csproj": {
+    "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Learning\\Assignment3\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\Learning\\Assignment3\\Common\\Common.csproj",
+        "projectPath": "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Rutvik\\.nuget\\packages\\",
-        "outputPath": "D:\\Learning\\Assignment3\\Common\\obj\\",
+        "outputPath": "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rutvik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "D:\\Learning\\Assignment3\\MovieApi\\MovieApi.csproj": {
+    "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\MovieApi\\MovieApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Learning\\Assignment3\\MovieApi\\MovieApi.csproj",
+        "projectUniqueName": "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\MovieApi\\MovieApi.csproj",
         "projectName": "MovieApi",
-        "projectPath": "D:\\Learning\\Assignment3\\MovieApi\\MovieApi.csproj",
+        "projectPath": "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\MovieApi\\MovieApi.csproj",
         "packagesPath": "C:\\Users\\Rutvik\\.nuget\\packages\\",
-        "outputPath": "D:\\Learning\\Assignment3\\MovieApi\\obj\\",
+        "outputPath": "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\MovieApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rutvik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Learning\\Assignment3\\Common\\Common.csproj": {
-                "projectPath": "D:\\Learning\\Assignment3\\Common\\Common.csproj"
+              "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\Common\\Common.csproj": {
+                "projectPath": "D:\\AssignMent\\Gateway-Assignment\\Microservices\\Assignment3\\Common\\Common.csproj"
               }
             }
           }
