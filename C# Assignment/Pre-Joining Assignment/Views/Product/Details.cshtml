@@ -1,0 +1,96 @@
+﻿@model ApiModels.Products.ProductModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="mt-3">Details</h2>
+
+@*<script type="text/javascript"></script>*@
+
+<table id="tb" class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(model => model.name)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.category)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.price)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.short_desc)</th>
+            <th scope="col">Image</th>
+            <th scope="col"></th>
+
+        </tr>
+    </thead>
+    <tbody>
+       @* @foreach (var prod in ViewBag.Prod)
+        {
+            <tr>
+                <th>@prod.name</th>
+                <th>@prod.category</th>
+                <th>@prod.price</th>
+                <th>@prod.short_desc</th>
+                <th>
+                    @{
+                        var img = "data:image/jpg;base64," +  (prod.small_img, 0, prod.small_img.Length);
+                    }
+                    <img src="@img" class="img-thumbnail rounded" style="width: auto; height: 125px;" alt="Cinque Terre">
+                </th>
+                <th>@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ })</th>
+                <th>@Html.ActionLink("Delete", "Delete", new { /* id = Model.PrimaryKey */ })</th>
+            </tr>
+        }*@
+
+    </tbody>
+</table>
+
+<link href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" rel="stylesheet">
+
+@section scriptt{
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#tb").DataTable(
+                {
+                    "ajax": {
+                        "url": "/Product/Detail",
+                        "type": "GET",
+                        "datatype": "json"
+                    },
+
+                    "columns": [
+                        {
+                            "data": 'name',
+                            "margin-left": '120px'
+                        },
+                        { "data": 'category' },
+                        { "data": 'price'},
+                        {
+                            "data": 'short_desc',
+                            "orderable": false},
+                        {
+                            "data": 'encode',
+                            "render": function (data) {
+                                var s = "data:image/jpg;base64,";
+                                s += data;
+                                return '<img class="img-thumbnail rounded " style="width: auto; height: 85px;" src=' +s + ' >'
+                            },
+                            "orderable": false
+                        },
+                        {
+                            "data": 'pid',
+                            "render": function (data) {
+                                return '<a class="btn btn-primary btn-xs mt-3" href="/Product/Update?pid=' + data +'">Edit</a>  <a class="btn btn-danger btn-xs mt-3" href="/Product/Delete?pid=' + data +'">Delete</a>'
+                            },
+                            "orderable": false
+
+
+                        }
+
+                    ]
+                });
+        });
+    </script>
+}

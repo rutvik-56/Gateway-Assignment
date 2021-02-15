@@ -1,0 +1,16 @@
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.DAL.dll
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.DAL.pdb
+D:\ServiceBookingSystem\Booking.DAL\obj\Debug\Booking.DAL.csprojAssemblyReference.cache
+D:\ServiceBookingSystem\Booking.DAL\obj\Debug\Booking.DAL.csproj.CoreCompileInputs.cache
+D:\ServiceBookingSystem\Booking.DAL\obj\Debug\Booking.DAL.dll
+D:\ServiceBookingSystem\Booking.DAL\obj\Debug\Booking.DAL.pdb
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.DAL.dll.config
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\EntityFramework.dll
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\EntityFramework.xml
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\ServiceBookingSystem\Booking.DAL\obj\Debug\Booking.DAL.csproj.CopyComplete
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.BE.dll
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.BE.pdb
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\AutoMapper.dll
+D:\ServiceBookingSystem\Booking.DAL\bin\Debug\AutoMapper.xml
