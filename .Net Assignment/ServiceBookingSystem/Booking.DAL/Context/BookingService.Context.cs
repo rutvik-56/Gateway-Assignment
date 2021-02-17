@@ -25,7 +25,6 @@ namespace Booking.DAL.Context
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Address> Address { get; set; }
         public virtual DbSet<City> City { get; set; }
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Dealer> Dealer { get; set; }
@@ -34,5 +33,6 @@ namespace Booking.DAL.Context
         public virtual DbSet<State> State { get; set; }
         public virtual DbSet<Vehicle> Vehicle { get; set; }
         public virtual DbSet<Booking> Booking { get; set; }
+        public virtual DbSet<Address> Address { get; set; }
     }
 }

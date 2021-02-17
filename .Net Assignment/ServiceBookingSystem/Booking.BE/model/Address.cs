@@ -11,6 +11,7 @@ namespace Booking.BE.model
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
 
     public class Address
@@ -18,17 +19,26 @@ namespace Booking.BE.model
   
         public int address_id { get; set; }
         public int mix_id { get; set; }
+        [DisplayName("Address")]
         public string address1 { get; set; }
-        public int city_id { get; set; }
-        public int state_id { get; set; }
 
+        [DisplayName("City")]
+        public string city { get; set; }
+
+        [DisplayName("State")]
+        public string state { get; set; }
+
+        [DisplayName("ZipCode")]
         [Required(ErrorMessage = "Please Enter ZipCode")]
         public string zipcode { get; set; }
-        public bool role { get; set; }
+
+        // 1 for user
+        // 0 for dealer
+        public int role { get; set; }
     
-        public virtual City City { get; set; }
-        public virtual Customer Customer { get; set; }
-        public virtual Dealer Dealer { get; set; }
-        public virtual State State { get; set; }
+        public virtual City CitName { get; set; }
+        public virtual Customer CustomerName { get; set; }
+        public virtual Dealer DealerName { get; set; }
+        public virtual State StateName { get; set; }
     }
 }

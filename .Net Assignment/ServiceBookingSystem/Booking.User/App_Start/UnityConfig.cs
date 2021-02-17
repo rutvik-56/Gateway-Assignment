@@ -13,7 +13,7 @@ namespace Booking.User
         {
 			var container = new UnityContainer();
             container.RegisterType<ICustomerAuth, CustomerAuth>();
-
+            container.RegisterType<IIndexActivity, IndexActivity>();
             // register all your components with the container here
             // it is NOT necessary to register your controllers
             container.AddNewExtension<UnityHelper>();

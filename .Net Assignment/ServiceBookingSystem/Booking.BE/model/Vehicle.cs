@@ -11,6 +11,7 @@ namespace Booking.BE.model
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
 
     public class Vehicle
@@ -24,16 +25,26 @@ namespace Booking.BE.model
         public int vehicle_id { get; set; }
         public int customer_id { get; set; }
 
+        [DisplayName("Owner Name")]
         public string owner_name { get; set; }
 
+        [DisplayName("Chassis Number")]
         [Required(ErrorMessage = "Please Enter Chassis Number")]
         public string chassis_no { get; set; }
+
+        [DisplayName("Registration Date")]
         public System.DateTime reg_date { get; set; }
         [Required(ErrorMessage = "Please Enter Plate Number")]
+
+        [DisplayName("Vehicle Plate Number")]
         public string plate_no { get; set; }
         [Required(ErrorMessage = "Please Enter Make")]
+
+        
+        [DisplayName("Make")]
         public string make { get; set; }
         [Required(ErrorMessage = "Please Enter Model Name")]
+        [DisplayName("Model")]
         public string model { get; set; }
     
         public virtual Customer Customer { get; set; }

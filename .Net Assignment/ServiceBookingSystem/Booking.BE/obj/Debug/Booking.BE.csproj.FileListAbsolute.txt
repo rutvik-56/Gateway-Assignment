@@ -6,3 +6,11 @@ D:\ServiceBookingSystem\Booking.BE\obj\Debug\Booking.BE.dll
 D:\ServiceBookingSystem\Booking.BE\obj\Debug\Booking.BE.pdb
 D:\ServiceBookingSystem\Booking.BE\bin\Debug\System.ComponentModel.Annotations.dll
 D:\ServiceBookingSystem\Booking.BE\obj\Debug\Booking.BE.csproj.CopyComplete
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.BE\bin\Debug\Booking.BE.dll
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.BE\bin\Debug\Booking.BE.pdb
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.BE\bin\Debug\System.ComponentModel.Annotations.dll
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.BE\obj\Debug\Booking.BE.csprojAssemblyReference.cache
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.BE\obj\Debug\Booking.BE.csproj.CoreCompileInputs.cache
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.BE\obj\Debug\Booking.BE.csproj.CopyComplete
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.BE\obj\Debug\Booking.BE.dll
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.BE\obj\Debug\Booking.BE.pdb

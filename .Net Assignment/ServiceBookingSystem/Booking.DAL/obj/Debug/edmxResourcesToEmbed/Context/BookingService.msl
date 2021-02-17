@@ -1,19 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ServiceBookingSystemModelStoreContainer" CdmEntityContainer="ServiceBookingSystemEntities">
-    <EntitySetMapping Name="Address">
-      <EntityTypeMapping TypeName="ServiceBookingSystemModel.Address">
-        <MappingFragment StoreEntitySet="Address">
-          <ScalarProperty Name="address_id" ColumnName="address_id" />
-          <ScalarProperty Name="mix_id" ColumnName="mix_id" />
-          <ScalarProperty Name="address1" ColumnName="address" />
-          <ScalarProperty Name="city_id" ColumnName="city_id" />
-          <ScalarProperty Name="state_id" ColumnName="state_id" />
-          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
-          <ScalarProperty Name="role" ColumnName="role" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="City">
       <EntityTypeMapping TypeName="ServiceBookingSystemModel.City">
         <MappingFragment StoreEntitySet="City">
@@ -95,6 +82,19 @@
           <ScalarProperty Name="service_id" ColumnName="service_id" />
           <ScalarProperty Name="vehicle_id" ColumnName="vehicle_id" />
           <ScalarProperty Name="booking_id" ColumnName="booking_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Address">
+      <EntityTypeMapping TypeName="ServiceBookingSystemModel.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+          <ScalarProperty Name="address1" ColumnName="address" />
+          <ScalarProperty Name="mix_id" ColumnName="mix_id" />
+          <ScalarProperty Name="address_id" ColumnName="address_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

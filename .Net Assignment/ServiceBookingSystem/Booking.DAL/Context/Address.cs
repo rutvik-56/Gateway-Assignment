@@ -20,7 +20,7 @@ namespace Booking.DAL.Context
         public int city_id { get; set; }
         public int state_id { get; set; }
         public string zipcode { get; set; }
-        public bool role { get; set; }
+        public int role { get; set; }
     
         public virtual City City { get; set; }
         public virtual Customer Customer { get; set; }

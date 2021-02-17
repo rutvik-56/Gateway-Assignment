@@ -13,6 +13,8 @@ namespace Booking.DAL.Repository.Interface
         void AddUser(Booking.BE.model.Customer customer);
 
         int validateUser(Booking.BE.model.Customer customer);
+
+        bool AddAddress(Booking.BE.model.Address address);
         
     }
 }

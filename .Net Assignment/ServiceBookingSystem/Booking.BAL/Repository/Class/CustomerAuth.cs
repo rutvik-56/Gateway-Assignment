@@ -30,5 +30,7 @@ namespace Booking.BAL.Repository.Class
         {
             return _userRepository.validateUser(customer);
         }
+
+    
     }
 }

@@ -1,28 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ServiceBookingSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Address">
-    <Key>
-      <PropertyRef Name="address_id" />
-    </Key>
-    <Property Name="address_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="mix_id" Type="Int32" Nullable="false" />
-    <Property Name="address1" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="city_id" Type="Int32" Nullable="false" />
-    <Property Name="state_id" Type="Int32" Nullable="false" />
-    <Property Name="zipcode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="role" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="City" Relationship="Self.FK_Address_City" FromRole="Address" ToRole="City" />
-    <NavigationProperty Name="Customer" Relationship="Self.FK_Address_Customer" FromRole="Address" ToRole="Customer" />
-    <NavigationProperty Name="Dealer" Relationship="Self.FK_Address_Dealer" FromRole="Address" ToRole="Dealer" />
-    <NavigationProperty Name="State" Relationship="Self.FK_Address_State" FromRole="Address" ToRole="State" />
-  </EntityType>
   <EntityType Name="City">
     <Key>
       <PropertyRef Name="city_id" />
     </Key>
     <Property Name="city_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Address" Relationship="Self.FK_Address_City" FromRole="City" ToRole="Address" />
+    <NavigationProperty Name="Address" Relationship="ServiceBookingSystemModel.FK_Address_City" FromRole="City" ToRole="Address" />
   </EntityType>
   <EntityType Name="Customer">
     <Key>
@@ -33,8 +17,8 @@
     <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Address" Relationship="Self.FK_Address_Customer" FromRole="Customer" ToRole="Address" />
     <NavigationProperty Name="Vehicle" Relationship="Self.FK_Vehicle_Customer" FromRole="Customer" ToRole="Vehicle" />
+    <NavigationProperty Name="Address" Relationship="ServiceBookingSystemModel.FK_Address_Customer" FromRole="Customer" ToRole="Address" />
   </EntityType>
   <EntityType Name="Dealer">
     <Key>
@@ -44,8 +28,8 @@
     <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="email" Type="String" MaxLength="110" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Address" Relationship="Self.FK_Address_Dealer" FromRole="Dealer" ToRole="Address" />
     <NavigationProperty Name="Mechanic" Relationship="Self.FK_Mechanic_Dealer" FromRole="Dealer" ToRole="Mechanic" />
+    <NavigationProperty Name="Address" Relationship="ServiceBookingSystemModel.FK_Address_Dealer" FromRole="Dealer" ToRole="Address" />
   </EntityType>
   <EntityType Name="Mechanic">
     <Key>
@@ -76,7 +60,7 @@
     </Key>
     <Property Name="state_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Address" Relationship="Self.FK_Address_State" FromRole="State" ToRole="Address" />
+    <NavigationProperty Name="Address" Relationship="ServiceBookingSystemModel.FK_Address_State" FromRole="State" ToRole="Address" />
   </EntityType>
   <EntityType Name="Vehicle">
     <Key>
@@ -93,54 +77,6 @@
     <NavigationProperty Name="Customer" Relationship="Self.FK_Vehicle_Customer" FromRole="Vehicle" ToRole="Customer" />
     <NavigationProperty Name="Booking" Relationship="ServiceBookingSystemModel.FK_Booking_Vehicle" FromRole="Vehicle" ToRole="Booking" />
   </EntityType>
-  <Association Name="FK_Address_City">
-    <End Role="City" Type="Self.City" Multiplicity="1" />
-    <End Role="Address" Type="Self.Address" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="City">
-        <PropertyRef Name="city_id" />
-      </Principal>
-      <Dependent Role="Address">
-        <PropertyRef Name="city_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Address_Customer">
-    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
-    <End Role="Address" Type="Self.Address" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Customer">
-        <PropertyRef Name="customer_id" />
-      </Principal>
-      <Dependent Role="Address">
-        <PropertyRef Name="mix_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Address_Dealer">
-    <End Role="Dealer" Type="Self.Dealer" Multiplicity="1" />
-    <End Role="Address" Type="Self.Address" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Dealer">
-        <PropertyRef Name="dealer_id" />
-      </Principal>
-      <Dependent Role="Address">
-        <PropertyRef Name="mix_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Address_State">
-    <End Role="State" Type="Self.State" Multiplicity="1" />
-    <End Role="Address" Type="Self.Address" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="State">
-        <PropertyRef Name="state_id" />
-      </Principal>
-      <Dependent Role="Address">
-        <PropertyRef Name="state_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Vehicle_Customer">
     <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
     <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="*" />
@@ -166,7 +102,6 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ServiceBookingSystemEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Address" EntityType="Self.Address" />
     <EntitySet Name="City" EntityType="Self.City" />
     <EntitySet Name="Customer" EntityType="Self.Customer" />
     <EntitySet Name="Dealer" EntityType="Self.Dealer" />
@@ -174,22 +109,6 @@
     <EntitySet Name="Service" EntityType="Self.Service" />
     <EntitySet Name="State" EntityType="Self.State" />
     <EntitySet Name="Vehicle" EntityType="Self.Vehicle" />
-    <AssociationSet Name="FK_Address_City" Association="Self.FK_Address_City">
-      <End Role="City" EntitySet="City" />
-      <End Role="Address" EntitySet="Address" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Address_Customer" Association="Self.FK_Address_Customer">
-      <End Role="Customer" EntitySet="Customer" />
-      <End Role="Address" EntitySet="Address" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Address_Dealer" Association="Self.FK_Address_Dealer">
-      <End Role="Dealer" EntitySet="Dealer" />
-      <End Role="Address" EntitySet="Address" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Address_State" Association="Self.FK_Address_State">
-      <End Role="State" EntitySet="State" />
-      <End Role="Address" EntitySet="Address" />
-    </AssociationSet>
     <AssociationSet Name="FK_Vehicle_Customer" Association="Self.FK_Vehicle_Customer">
       <End Role="Customer" EntitySet="Customer" />
       <End Role="Vehicle" EntitySet="Vehicle" />
@@ -218,6 +137,23 @@
     <AssociationSet Name="FK_Booking_Vehicle" Association="ServiceBookingSystemModel.FK_Booking_Vehicle">
       <End Role="Vehicle" EntitySet="Vehicle" />
       <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <EntitySet Name="Address" EntityType="ServiceBookingSystemModel.Address" />
+    <AssociationSet Name="FK_Address_City" Association="ServiceBookingSystemModel.FK_Address_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Address_Customer" Association="ServiceBookingSystemModel.FK_Address_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Address_Dealer" Association="ServiceBookingSystemModel.FK_Address_Dealer">
+      <End Role="Dealer" EntitySet="Dealer" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Address_State" Association="ServiceBookingSystemModel.FK_Address_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="Address" EntitySet="Address" />
     </AssociationSet>
   </EntityContainer>
   <Association Name="FK_Customer_Customer">
@@ -290,6 +226,70 @@
       </Principal>
       <Dependent Role="Booking">
         <PropertyRef Name="vehicle_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="address_id" />
+    </Key>
+    <Property Name="address_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mix_id" Type="Int32" Nullable="false" />
+    <Property Name="address1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="city_id" Type="Int32" Nullable="false" />
+    <Property Name="state_id" Type="Int32" Nullable="false" />
+    <Property Name="zipcode" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="City" Relationship="ServiceBookingSystemModel.FK_Address_City" FromRole="Address" ToRole="City" />
+    <NavigationProperty Name="Customer" Relationship="ServiceBookingSystemModel.FK_Address_Customer" FromRole="Address" ToRole="Customer" />
+    <NavigationProperty Name="Dealer" Relationship="ServiceBookingSystemModel.FK_Address_Dealer" FromRole="Address" ToRole="Dealer" />
+    <NavigationProperty Name="State" Relationship="ServiceBookingSystemModel.FK_Address_State" FromRole="Address" ToRole="State" />
+  </EntityType>
+  <Association Name="FK_Address_City">
+    <End Type="ServiceBookingSystemModel.City" Role="City" Multiplicity="1" />
+    <End Type="ServiceBookingSystemModel.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="city_id" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Address_Customer">
+    <End Type="ServiceBookingSystemModel.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="ServiceBookingSystemModel.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="mix_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Address_Dealer">
+    <End Type="ServiceBookingSystemModel.Dealer" Role="Dealer" Multiplicity="1" />
+    <End Type="ServiceBookingSystemModel.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealer">
+        <PropertyRef Name="dealer_id" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="mix_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Address_State">
+    <End Type="ServiceBookingSystemModel.State" Role="State" Multiplicity="1" />
+    <End Type="ServiceBookingSystemModel.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="state_id" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="state_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

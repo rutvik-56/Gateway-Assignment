@@ -1,0 +1,76 @@
+﻿@model Booking.BE.model.Vehicle
+
+<div>
+    <h4>Vehicle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.vehicle_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vehicle_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.owner_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.owner_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chassis_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chassis_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reg_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reg_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.plate_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.plate_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

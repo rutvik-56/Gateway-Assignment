@@ -11,5 +11,7 @@ namespace Booking.BAL.Repository.Interface
         bool checkEmail(string str);
         void AddUser(Booking.BE.model.Customer customer);
         int validateUser(BE.model.Customer customer);
+
+        
     }
 }

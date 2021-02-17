@@ -14,3 +14,19 @@ D:\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.BE.dll
 D:\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.BE.pdb
 D:\ServiceBookingSystem\Booking.DAL\bin\Debug\AutoMapper.dll
 D:\ServiceBookingSystem\Booking.DAL\bin\Debug\AutoMapper.xml
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.DAL.dll.config
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.DAL.dll
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.DAL.pdb
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\AutoMapper.dll
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.BE.dll
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\EntityFramework.dll
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\Booking.BE.pdb
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\AutoMapper.xml
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\EntityFramework.xml
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\obj\Debug\Booking.DAL.csprojAssemblyReference.cache
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\obj\Debug\Booking.DAL.csproj.CoreCompileInputs.cache
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\obj\Debug\Booking.DAL.csproj.CopyComplete
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\obj\Debug\Booking.DAL.dll
+D:\AssignMent\Gateway-Assignment\.Net Assignment\ServiceBookingSystem\Booking.DAL\obj\Debug\Booking.DAL.pdb

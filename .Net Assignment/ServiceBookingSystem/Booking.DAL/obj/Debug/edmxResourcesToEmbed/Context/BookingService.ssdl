@@ -10,7 +10,7 @@
     <Property Name="city_id" Type="int" Nullable="false" />
     <Property Name="state_id" Type="int" Nullable="false" />
     <Property Name="zipcode" Type="varchar" MaxLength="6" Nullable="false" />
-    <Property Name="role" Type="bit" Nullable="false" />
+    <Property Name="role" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Booking">
     <Key>

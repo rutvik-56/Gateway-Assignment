@@ -14,17 +14,18 @@ namespace Booking.User.Controllers
     public class HomeController : Controller
     {
         private readonly ICustomerAuth _customerAuth;
-        public HomeController(ICustomerAuth customerAuth)
+        private readonly IIndexActivity _indexActivity;
+        public HomeController(ICustomerAuth customerAuth, IIndexActivity indexActivity)
         {
-            _customerAuth = customerAuth;
+            this._customerAuth = customerAuth;
+            this._indexActivity = indexActivity;
         }
 
         [Authorize]
-        public string index()
+        public ActionResult index()
         {
-            return "hello";
+            return View();
         }
-
 
         [HttpPost]
         public ActionResult Login([Bind(Include = "email, password")]Customer customer)
@@ -47,9 +48,49 @@ namespace Booking.User.Controllers
             return View();
         }
 
+        [Authorize]
+        [HttpGet]
+        public PartialViewResult AddAddress()
+        {
+            return PartialView("~/Views/Home/Address/Add.cshtml");
+        }
+
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public ViewResult AddAddress([Bind(Exclude="address_id, mix_id,role")]Address address)
+        {
+            address.role = 1;
+            address.mix_id = int.Parse(User.Identity.Name);
+            _indexActivity.AddAddress(address);
+            return View("index");
+        }
+
+        [Authorize]
+        public PartialViewResult ViewAddress()
+        {
+            return PartialView("~/Views/Home/Address/View.cshtml");
+        }
+
+        [Authorize]
+        public PartialViewResult AddVehicle()
+        {
+            return PartialView("~/Views/Home/Vehicle/Add.cshtml");
+        }
+
         public ViewResult Login()
         {
             return View();
+        }
+
+        [Authorize]
+        public ViewResult Logout()
+        {
+            Session.Abandon();
+            Session.Clear();
+            Session.RemoveAll();
+            FormsAuthentication.SignOut();
+            return View("Login");
         }
 
         public ViewResult SignUp()

@@ -9,16 +9,34 @@
 </head>
 
 <body>
-    <div class="navbar navbar-inverse">
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                @Html.ActionLink("Service Booking System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Service Booking System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
 
         </div>
-
     </div>
+
+    @if (ViewBag.Title == "Index")
+    {
+
+<div class="sidenav">
+    <a id="home">Home</a><br />
+    <br />
+    <a id="address">Add Address</a><br />
+    <br />
+
+    <a id="vehicle">Add Vehicle</a><br />
+    <br />
+    @Html.ActionLink("Logout", "Logout", "Home", new { id = "Logout" })
+
+    <br />
+
+</div>
+
+    }
+
 
     <div class="container body-content">
         @RenderBody()
@@ -27,5 +45,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>
