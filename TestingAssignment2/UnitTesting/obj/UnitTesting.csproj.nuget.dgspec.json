@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Learning\\TestingAssignment2\\UnitTesting\\UnitTesting.csproj": {}
+  },
+  "projects": {
+    "D:\\Learning\\TestingAssignment2\\TestingAssignment2\\TestingAssignment2.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Learning\\TestingAssignment2\\TestingAssignment2\\TestingAssignment2.csproj",
+        "projectName": "TestingAssignment2",
+        "projectPath": "D:\\Learning\\TestingAssignment2\\TestingAssignment2\\TestingAssignment2.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Learning\\TestingAssignment2\\UnitTesting\\UnitTesting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Learning\\TestingAssignment2\\UnitTesting\\UnitTesting.csproj",
+        "projectName": "UnitTesting",
+        "projectPath": "D:\\Learning\\TestingAssignment2\\UnitTesting\\UnitTesting.csproj",
+        "packagesPath": "C:\\Users\\Rutvik\\.nuget\\packages\\",
+        "outputPath": "D:\\Learning\\TestingAssignment2\\UnitTesting\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rutvik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {
+              "D:\\Learning\\TestingAssignment2\\TestingAssignment2\\TestingAssignment2.csproj": {
+                "projectPath": "D:\\Learning\\TestingAssignment2\\TestingAssignment2\\TestingAssignment2.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
